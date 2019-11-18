@@ -6,6 +6,10 @@ use App\Collection;
 use PHPUnit\Framework\TestCase;
 use IteratorAggregate;
 
+/**
+ * Class CollectionTest
+ * @package Tests
+ */
 class CollectionTest extends TestCase
 {
     /**
