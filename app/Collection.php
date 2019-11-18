@@ -6,7 +6,10 @@ use IteratorAggregate;
 use ArrayIterator;
 use JsonSerializable;
 
-
+/**
+ * Class Collection
+ * @package App
+ */
 class Collection implements IteratorAggregate, JsonSerializable
 {
     protected $items = [];
