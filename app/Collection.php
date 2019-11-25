@@ -14,9 +14,16 @@ class Collection implements IteratorAggregate, JsonSerializable
 {
     protected $items = [];
 
-    public function __construct(array $items = [])
+    public function add($item)
     {
-        $this->items = $items;
+        $this->items[] = $item;
+    }
+
+    public function addItems(array $items)
+    {
+        foreach ($items as $item) {
+            $this->add($item);
+        }
     }
 
     public function count()
@@ -44,3 +51,7 @@ class Collection implements IteratorAggregate, JsonSerializable
         return "Essa é uma coleção e nao deve ser printada";
     }
 }
+
+
+
+

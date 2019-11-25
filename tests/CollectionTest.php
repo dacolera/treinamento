@@ -23,7 +23,19 @@ class CollectionTest extends TestCase
      */
     public function collection_can_count_itens()
     {
-        $collection = new Collection(
+        $collection = new Collection;
+
+        $collection->addItems(
+            [
+                'um',
+                'dois',
+                'tres'
+            ]
+        );
+
+        $collection2 = new Collection;
+
+        $collection2->addItems(
             [
                 'um',
                 'dois',
@@ -49,7 +61,9 @@ class CollectionTest extends TestCase
      */
     public function can_get_all_items_of_collection()
     {
-        $collection = new Collection(
+        $collection = new Collection;
+
+        $collection->addItems(
             [
                 'um',
                 'dois',
@@ -75,7 +89,9 @@ class CollectionTest extends TestCase
      */
     public function collection_is_iterable()
     {
-        $collection = new Collection(
+        $collection = new Collection;
+
+        $collection->addItems(
             [
                 'um',
                 'dois',
@@ -97,7 +113,9 @@ class CollectionTest extends TestCase
      */
     public function get_collection_as_json()
     {
-        $collection = new Collection(
+        $collection = new Collection;
+
+        $collection->addItems(
             [
                 ["nome" => "wesley", "idade" => 23],
                 ["nome" => "tiago", "idade" => 24],
@@ -116,7 +134,9 @@ class CollectionTest extends TestCase
      */
     public function collection_is_printable()
     {
-        $collection = new Collection(
+        $collection = new Collection;
+
+        $collection->addItems(
             [
                 ["nome" => "wesley", "idade" => 23],
                 ["nome" => "tiago", "idade" => 24],
