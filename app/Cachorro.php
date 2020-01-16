@@ -9,6 +9,7 @@ class Cachorro extends Animal
     {
         return 'auauauauauau';
     }
+
     public function comer()
     {
         return 'vrac';
