@@ -13,7 +13,7 @@ class AnimaisTest extends TestCase
 {
     public function test_gato_eh_do_tipo_gato_e_tipo_animal()
     {
-        $gato = new Gato('branco', 2);
+        $gato = new Gato('branco', 2, 2);
 
         $this->assertInstanceOf(Gato::class, $gato);
         $this->assertInstanceOf(Animal::class, $gato);
@@ -28,7 +28,7 @@ class AnimaisTest extends TestCase
 
     public function test_gato_come_com_som_hibrido_cruccrucuzzzzz()
     {
-        $gato = new Gato('cinza', 1);
+        $gato = new Gato('cinza', 1, 1);
 
         $this->assertEquals('cruccrucuzzzzz', $gato->comer(), 'Erro ao verificar o som que o gato emite ao comer');
     }
