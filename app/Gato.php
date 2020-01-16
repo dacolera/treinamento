@@ -12,6 +12,6 @@ final class Gato extends Animal
 
     public function comer()
     {
-        return "cruccrucuzzzzz";
+        return parent::comer() . 'zzzzz';
     }
 }
