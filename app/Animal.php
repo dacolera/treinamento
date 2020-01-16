@@ -21,6 +21,6 @@ abstract class Animal
 
     public function comer()
     {
-        return 'cruccrucu';
+        return 'cruccrucu' ;
     }
 }
