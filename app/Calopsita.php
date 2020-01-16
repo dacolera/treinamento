@@ -14,4 +14,9 @@ class Calopsita extends Animal
     {
         return 'vukllllllll';
     }
+
+    public function comer()
+    {
+        return "tictic";
+    }
 }

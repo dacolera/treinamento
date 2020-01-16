@@ -9,4 +9,9 @@ final class Gato extends Animal
     {
         return 'miiiiiaaaauuuuu';
     }
+
+    public function comer()
+    {
+        return "cruccrucuzzzzz";
+    }
 }
