@@ -19,24 +19,39 @@ class AnimaisTest extends TestCase
         $this->assertInstanceOf(Animal::class, $gato);
     }
 
-    public function test_cachorro_faz_som_vrac()
+    /**
+     * @dataProvider getAnimals
+     */
+    public function test_animal_sounds_eating($animal, $expected, $message)
     {
-        $cachorro  = new Cachorro('malhado', 5);
-
-        $this->assertEquals('vrac', $cachorro->comer(), 'Erro ao verificar o som que o cachorro emite ao comer');
+        $this->assertEquals($expected, $animal->comer(), $message);
     }
 
-    public function test_gato_come_com_som_hibrido_cruccrucuzzzzz()
+    /**
+     * @return array
+     * format [object, expected, message]
+     */
+    public function getAnimals()
     {
-        $gato = new Gato('cinza', 1, 1);
+        return [
+            [
+                new Cachorro('malhado', 5),
+                'vrac',
+                'Erro ao verificar o som que o cachorro emite ao comer'
+            ],
+            [
+                new Gato('cinza', 1, 1),
+                'cruccrucuzzzzz',
+                'Erro ao verificar o som que o gato emite ao comer'
+            ],
+            [
+                new Calopsita('cinza', 1),
+                'tictic',
+                'Erro ao verificar o som que a calopsita emite ao comer'
+            ],
+            [
 
-        $this->assertEquals('cruccrucuzzzzz', $gato->comer(), 'Erro ao verificar o som que o gato emite ao comer');
-    }
-
-    public function test_calopsita_come_com_som_tictic()
-    {
-        $calopsita = new Calopsita('cinza', 1);
-
-        $this->assertEquals('tictic', $calopsita->comer(), 'Erro ao verificar o som que a calopsita emite ao comer');
+            ]
+        ];
     }
 }
